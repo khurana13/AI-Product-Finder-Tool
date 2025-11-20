@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Chat - AI Product Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css?v=4">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">⚡ AI Product Finder</div>
+    <div class="nav-links">
+      <a href="/static/home.html" class="nav-link-modern">
+        <span class="nav-icon">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="/static/search.html" class="nav-link-modern">
+        <span class="nav-icon">🔍</span>
+        <span>Search</span>
+      </a>
+      <a href="/static/chat.html" class="active nav-link-modern">
+        <span class="nav-icon">💬</span>
+        <span>Chat</span>
+      </a>
+      <a href="/static/about.html" class="nav-link-modern">
+        <span class="nav-icon">📋</span>
+        <span>About</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container page-container">
+    <div class="page-header-modern">
+      <h1 class="page-title">
+        <span class="title-gradient">💬 AI Chat Assistant</span>
+      </h1>
+      <p class="page-subtitle">Engage in natural conversations to discover the perfect products for your needs</p>
+    </div>
+
+    <!-- Chat Container -->
+    <div class="chat-container-modern">
+      <div id="chatMessages" class="chat-messages-modern">
+        <div class="chat-message-modern">
+          <div class="message-avatar-modern">
+            <span class="avatar-icon">🤖</span>
+          </div>
+          <div class="message-content-modern">
+            <div class="message-header">
+              <span class="sender-name">AI Assistant</span>
+              <span class="message-time">Now</span>
+            </div>
+            <p class="message-text">Hello! I'm your intelligent product discovery assistant. I can help you find exactly what you're looking for using natural language queries!</p>
+            <div class="suggestions-modern">
+              <p class="suggestions-label-modern">Try asking:</p>
+              <div class="suggestion-chips">
+                <button class="suggestion-chip-modern">"Best gaming laptops under 60000"</button>
+                <button class="suggestion-chip-modern">"Mobile phones with excellent camera"</button>
+                <button class="suggestion-chip-modern">"Wireless headphones under 2000"</button>
+              </div>
+            </div>
+            <div class="message-status">
+              <span class="status-icon">✓</span>
+              <span>Delivered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-input-container-modern">
+        <div class="input-wrapper">
+          <input id="chatInput" class="chat-input-modern" placeholder="Ask me anything about products... (e.g., 'show me laptops with 16GB RAM under 50000')" />
+          <button id="sendBtn" class="send-btn">
+            <span class="btn-icon">📤</span>
+            <span class="btn-text">Send</span>
+          </button>
+        </div>
+        <div class="input-footer">
+          <span class="input-hint">� Tip: Be specific about your requirements for better results</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product Card Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content product-card-large">
+      <span class="modal-close">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <div class="footer-content">
+      <div class="footer-text">🚀 AI-powered product search engine • Built with Flask, scikit-learn & TF-IDF</div>
+      <div class="footer-credit">Developed for AI PBL by Aditya Tripathi (Team: 5th Sem Students)</div>
+    </div>
+  </footer>
+
+  <script src="/static/chat.js"></script>
+  <script src="/static/theme.js"></script>
+</body>
+</html>

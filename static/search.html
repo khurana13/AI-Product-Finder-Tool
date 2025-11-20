@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Search - AI Product Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css?v=5">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">⚡ AI Product Finder</div>
+    <div class="nav-links">
+      <a href="/static/home.html" class="nav-link-modern">
+        <span class="nav-icon">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="/static/search.html" class="active nav-link-modern">
+        <span class="nav-icon">🔍</span>
+        <span>Search</span>
+      </a>
+      <a href="/static/chat.html" class="nav-link-modern">
+        <span class="nav-icon">💬</span>
+        <span>Chat</span>
+      </a>
+      <a href="/static/about.html" class="nav-link-modern">
+        <span class="nav-icon">📋</span>
+        <span>About</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container page-container">
+    <div class="page-header-modern">
+      <h1 class="page-title">
+        <span class="title-gradient">🔍 Advanced Search</span>
+      </h1>
+      <p class="page-subtitle">Discover products with intelligent filtering and real-time results</p>
+    </div>
+
+    <!-- Search Controls -->
+    <div class="search-panel-modern">
+      <div class="search-main">
+        <div class="search-input-wrapper">
+          <input id="searchQuery" class="search-input-modern" placeholder="Search for products (e.g., 'gaming laptop', 'wireless headphones')" />
+          <button id="searchBtn" class="search-btn">
+            <span class="btn-icon">🔍</span>
+            <span class="btn-text">Search</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="filters-section">
+        <div class="filters-header">
+          <h3 class="filters-title">Refine Your Search</h3>
+          <button id="clearFilters" class="clear-filters-btn">
+            <span class="btn-icon">🗑️</span>
+            <span class="btn-text">Clear Filters</span>
+          </button>
+        </div>
+        <div class="filters-grid">
+          <div class="filter-group">
+            <label class="filter-label">Category</label>
+            <select id="category" class="filter-input-modern">
+              <option value="">All Categories</option>
+              <option value="laptop">💻 Laptop</option>
+              <option value="mobile">📱 Mobile</option>
+              <option value="headphone">🎧 Headphone</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label">Price Range</label>
+            <div class="price-range">
+              <input id="minPrice" class="filter-input-modern" placeholder="Min ₹" type="number" min="0" step="1" />
+              <span class="price-separator">to</span>
+              <input id="maxPrice" class="filter-input-modern" placeholder="Max ₹" type="number" min="0" step="1" />
+            </div>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label">Results Per Page</label>
+            <select id="perPage" class="filter-input-modern">
+              <option value="10">10 results</option>
+              <option value="20">20 results</option>
+              <option value="50">50 results</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label">Show Fields (Optional)</label>
+            <input id="fields" class="filter-input-modern" placeholder="e.g., Brand,Model,Price" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="resultsContainer" class="results-container-modern">
+      <div class="empty-state-modern">
+        <div class="empty-icon-modern">🔍</div>
+        <h3 class="empty-title">Start Your Discovery Journey</h3>
+        <p class="empty-description">Enter a search query above to explore our intelligent product database</p>
+        <div class="search-suggestions">
+          <p class="suggestions-title">Try searching for:</p>
+          <div class="suggestion-tags">
+            <span class="suggestion-tag" onclick="document.getElementById('searchQuery').value='gaming laptop'; document.getElementById('searchBtn').click();">gaming laptop</span>
+            <span class="suggestion-tag" onclick="document.getElementById('searchQuery').value='wireless headphones'; document.getElementById('searchBtn').click();">wireless headphones</span>
+            <span class="suggestion-tag" onclick="document.getElementById('searchQuery').value='smartphone under 20000'; document.getElementById('searchBtn').click();">smartphone under 20000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading State Template (Hidden by default) -->
+    <div id="loadingState" class="search-loading" style="display: none;">
+      <div class="loading-spinner"></div>
+      <div class="search-loading-text">Searching through our product database...</div>
+    </div>
+
+    <!-- Pagination -->
+    <div id="pagination" class="pagination-modern"></div>
+  </div>
+
+  <!-- Product Details Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content product-card-large">
+      <span class="modal-close">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <div class="footer-content">
+      <div class="footer-text">🚀 AI-powered product search engine • Built with Flask, scikit-learn & TF-IDF</div>
+      <div class="footer-credit">Developed for AI PBL by Aditya Tripathi (Team: 5th Sem Students)</div>
+    </div>
+  </footer>
+
+  <script src="/static/search.js"></script>
+  <script src="/static/theme.js"></script>
+</body>
+</html>

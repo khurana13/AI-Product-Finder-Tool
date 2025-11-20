@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About - AI Product Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css?v=5">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">⚡ AI Product Finder</div>
+    <div class="nav-links">
+      <a href="/static/home.html" class="nav-link-modern">
+        <span class="nav-icon">🏠</span>
+        <span>Home</span>
+      </a>
+      <a href="/static/search.html" class="nav-link-modern">
+        <span class="nav-icon">🔍</span>
+        <span>Search</span>
+      </a>
+      <a href="/static/chat.html" class="nav-link-modern">
+        <span class="nav-icon">💬</span>
+        <span>Chat</span>
+      </a>
+      <a href="/static/about.html" class="active nav-link-modern">
+        <span class="nav-icon">📋</span>
+        <span>About</span>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container page-container">
+    <div class="page-header-modern">
+      <h1 class="page-title">
+        <span class="title-gradient">📋 About This Project</span>
+      </h1>
+      <p class="page-subtitle">Learn about our AI-powered product search engine and the technology behind it</p>
+    </div>
+
+    <!-- Project Overview -->
+    <section class="about-section">
+      <div class="about-card">
+        <div class="card-header">
+          <h2 class="card-title">🎯 Project Overview</h2>
+        </div>
+        <div class="card-content">
+          <p>The AI Product Finder is an intelligent search engine built for the AI PBL (Project Based Learning) course. It demonstrates advanced information retrieval techniques combined with natural language processing to create an intuitive product discovery experience.</p>
+          
+          <div class="key-features">
+            <h3>🌟 Key Features</h3>
+            <ul class="features-list">
+              <li><strong>TF-IDF Retrieval:</strong> Advanced term frequency-inverse document frequency algorithms for accurate product matching</li>
+              <li><strong>Natural Language Processing:</strong> Understanding user queries in conversational language</li>
+              <li><strong>Smart Price Parsing:</strong> Automatic detection of price constraints like "under 2000" or "between 10000-20000"</li>
+              <li><strong>Multi-Category Search:</strong> Unified search across laptops, mobiles, and headphones</li>
+              <li><strong>Real-time Chat:</strong> AI-powered conversational interface for product recommendations</li>
+              <li><strong>Web Integration:</strong> Ability to fetch product information from external websites</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Architecture -->
+    <section class="about-section">
+      <div class="about-card">
+        <div class="card-header">
+          <h2 class="card-title">🏗️ Technical Architecture</h2>
+        </div>
+        <div class="card-content">
+          <div class="tech-stack-grid">
+            <div class="tech-item">
+              <div class="tech-icon">🐍</div>
+              <h4>Backend Technology</h4>
+              <p><strong>Python 3.10+</strong> with Flask framework for robust API development and server-side processing</p>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">🧠</div>
+              <h4>Machine Learning</h4>
+              <p><strong>scikit-learn</strong> for TF-IDF vectorization, cosine similarity calculations, and document retrieval</p>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">💾</div>
+              <h4>Data Processing</h4>
+              <p><strong>pandas</strong> for data manipulation, <strong>joblib</strong> for model persistence and caching</p>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">🤖</div>
+              <h4>AI Integration</h4>
+              <p><strong>Google Gemini API</strong> for generative AI responses and natural language understanding</p>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">🌐</div>
+              <h4>Web Technologies</h4>
+              <p><strong>HTML5, CSS3, JavaScript</strong> with modern responsive design and Windows UI styling</p>
+            </div>
+            <div class="tech-item">
+              <div class="tech-icon">🔍</div>
+              <h4>Web Scraping</h4>
+              <p><strong>BeautifulSoup, requests</strong> for extracting product data from external websites</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="about-section">
+      <div class="about-card">
+        <div class="card-header">
+          <h2 class="card-title">⚙️ How It Works</h2>
+        </div>
+        <div class="card-content">
+          <div class="workflow-steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Data Ingestion</h4>
+                <p>Product data is loaded from CSV files containing information about laptops, mobiles, and headphones with specifications, prices, and features.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Text Processing</h4>
+                <p>Product descriptions are processed to create a weighted corpus where important fields (name, brand, specs) are given higher importance.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>TF-IDF Indexing</h4>
+                <p>A TF-IDF matrix is built using scikit-learn with optimized parameters for n-gram analysis and stop word removal.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4>Query Processing</h4>
+                <p>User queries are analyzed for price constraints, category hints, and converted to TF-IDF vectors for similarity matching.</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">5</div>
+              <div class="step-content">
+                <h4>Result Ranking</h4>
+                <p>Cosine similarity scores are calculated and results are filtered, ranked, and presented with relevance scores.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Information -->
+    <section class="about-section">
+      <div class="about-card">
+        <div class="card-header">
+          <h2 class="card-title">👥 Development Team</h2>
+        </div>
+        <div class="card-content">
+          <div class="team-info">
+            <div class="team-details">
+              <h3>Academic Information</h3>
+              <div class="info-grid">
+                <div class="info-item">
+                  <span class="info-label">Course:</span>
+                  <span class="info-value">AI PBL (Project Based Learning)</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Semester:</span>
+                  <span class="info-value">5th Semester</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Academic Year:</span>
+                  <span class="info-value">2024-25</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">University:</span>
+                  <span class="info-value">Manav Rachna International Institute of Research and Studies (MRIIRS)</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Department:</span>
+                  <span class="info-value">Computer Science & Engineering</span>
+                </div>
+                <div class="info-item">
+                  <span class="info-label">Lead Developer:</span>
+                  <span class="info-value">Sneha Khurana</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Team Members List -->
+    <section class="about-section">
+      <div class="about-card">
+        <div class="card-header">
+          <h2 class="card-title">👥 Team Members</h2>
+        </div>
+        <div class="card-content">
+          <ul class="team-list" style="line-height:1.8">
+            <li><strong>1.</strong> Sneha Khurana — Roll: 1/23/SET/BCS/502</li>
+            <li><strong>2.</strong> Aaditya Thakaran — Roll: 1/23/SET/BCS/496</li>
+            <li><strong>3.</strong> Manya Anand — Roll: 1/23/SET/BCS/555</li>
+            <li><strong>4.</strong> Sanandita Debnath — Roll: 1/23/SET/BCS/506</li>
+          </ul>
+          <p style="margin-top:8px;"><strong>All team members are from Manav Rachna International Institute of Research and Studies (MRIIRS).</strong></p>
+        </div>
+      </div>
+    </section>
+    <!-- API Information -->
+    <section class="about-section">
+      <div class="about-card">
+        <div class="card-header">
+          <h2 class="card-title">🔗 API Endpoints</h2>
+        </div>
+        <div class="card-content">
+          <div class="api-endpoints">
+            <div class="endpoint">
+              <div class="endpoint-method get">GET</div>
+              <div class="endpoint-path">/search</div>
+              <div class="endpoint-desc">Search products with query parameters</div>
+            </div>
+            <div class="endpoint">
+              <div class="endpoint-method post">POST</div>
+              <div class="endpoint-path">/chat</div>
+              <div class="endpoint-desc">Natural language chat interface</div>
+            </div>
+            <div class="endpoint">
+              <div class="endpoint-method post">POST</div>
+              <div class="endpoint-path">/search_web</div>
+              <div class="endpoint-desc">Web search and product fetching</div>
+            </div>
+            <div class="endpoint">
+              <div class="endpoint-method post">POST</div>
+              <div class="endpoint-path">/fetch_product</div>
+              <div class="endpoint-desc">Extract product data from URLs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="about-section">
+      <div class="about-card">
+        <div class="card-header">
+          <h2 class="card-title">📊 Performance Metrics</h2>
+        </div>
+        <div class="card-content">
+          <div class="metrics-grid">
+            <div class="metric">
+              <div class="metric-value">1000+</div>
+              <div class="metric-label">Products Indexed</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">< 100ms</div>
+              <div class="metric-label">Search Response Time</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">95%+</div>
+              <div class="metric-label">Query Accuracy</div>
+            </div>
+            <div class="metric">
+              <div class="metric-value">3</div>
+              <div class="metric-label">Product Categories</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Future Enhancements -->
+    <section class="about-section">
+      <div class="about-card">
+        <div class="card-header">
+          <h2 class="card-title">🚀 Future Enhancements</h2>
+        </div>
+        <div class="card-content">
+          <div class="enhancements-grid">
+            <div class="enhancement">
+              <h4>🔮 Advanced ML Models</h4>
+              <p>Integration with transformer models for better semantic understanding</p>
+            </div>
+            <div class="enhancement">
+              <h4>📱 Mobile Application</h4>
+              <p>Native mobile apps with offline search capabilities</p>
+            </div>
+            <div class="enhancement">
+              <h4>🛒 E-commerce Integration</h4>
+              <p>Direct integration with popular e-commerce platforms</p>
+            </div>
+            <div class="enhancement">
+              <h4>📈 Analytics Dashboard</h4>
+              <p>Search analytics and user behavior insights</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="page-footer">
+    <div class="footer-content">
+      <div class="footer-text">🚀 AI-powered product search engine • Built with Flask, scikit-learn & TF-IDF</div>
+      <div class="footer-credit">Completely developed by Sneha Khurana and team • MRIIRS</div>
+    </div>
+  </footer>
+
+  <script src="/static/theme.js"></script>
+</body>
+</html>

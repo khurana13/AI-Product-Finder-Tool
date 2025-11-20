@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AI Product Search & Chatbot</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+ </head>
+<body>
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>🤖 AI Product Search & Chatbot</h1>
+    <p>Intelligent search powered by TF-IDF retrieval. Ask questions naturally or filter by category, price, and specs.</p>
+  </div>
+
+  <div class="container">
+    <!-- Chat Section -->
+    <section class="card">
+      <h2>💬 Natural Language Chat</h2>
+      <div class="row">
+        <input id="chatQuery" placeholder="Ask: 'Show me best headphones under ₹2000' or 'laptops with 16gb ram'" />
+        <button id="chatBtn">Ask AI</button>
+      </div>
+      <div id="chatResult" class="results"></div>
+    </section>
+
+    <!-- Product Search Section -->
+    <section class="card">
+      <h2>🔍 Advanced Product Search</h2>
+      <div class="row">
+        <select id="category">
+          <option value="laptop">💻 Laptop</option>
+          <option value="mobile">📱 Mobile</option>
+          <option value="headphone">🎧 Headphone</option>
+        </select>
+        <input id="minPrice" placeholder="Min price (₹)" type="number" />
+        <input id="maxPrice" placeholder="Max price (₹)" type="number" />
+      </div>
+      <div class="row" style="margin-top:8px;">
+        <label>Show only fields:</label>
+        <input id="fields" placeholder="e.g. name,brand,price (leave empty for all)" />
+        <button id="searchBtn">Search</button>
+      </div>
+      <div id="searchResult" class="results"></div>
+    </section>
+
+    <!-- Admin Section -->
+    <section class="card">
+      <h2>⚙️ Admin Controls</h2>
+      <div class="row">
+        <input id="adminToken" placeholder="Admin token (or use Basic auth)" style="flex:2" />
+        <button id="rebuildBtn">🔄 Rebuild Index</button>
+        <button id="rotateBtn">🔑 Rotate Token</button>
+      </div>
+      <div id="adminResult" class="results"></div>
+      
+      <div class="row" style="margin-top:16px; padding-top:16px; border-top: 1px solid rgba(255,255,255,0.1);">
+        <input id="newUsername" placeholder="New admin username" />
+        <input id="newPassword" placeholder="New admin password" type="password" />
+        <button id="resetBtn">🔒 Reset Password</button>
+      </div>
+      <div id="resetResult" class="results"></div>
+    </section>
+
+    <footer>
+      🚀 AI-powered product search engine • Built with Flask, scikit-learn & TF-IDF
+      <div class="footer-credit">Completely developed by Sneha Khurana and team</div>
+    </footer>
+  </div>
+  
+  <!-- Meet Our Team (Landing) -->
+  <div class="container" style="margin-top:18px;">
+    <section class="card">
+      <h2>👥 Meet Our Team</h2>
+      <p style="margin-bottom:8px;">All members are students at Manav Rachna International Institute of Research and Studies (MRIIRS).</p>
+      <ul style="line-height:1.8; margin:0; padding-left:18px;">
+        <li><strong>Sneha Khurana</strong> — Roll: 1/23/SET/BCS/502 — Student</li>
+        <li><strong>Aaditya Thakaran</strong> — Roll: 1/23/SET/BCS/496 — Student</li>
+        <li><strong>Manya Anand</strong> — Roll: 1/23/SET/BCS/555 — Student</li>
+        <li><strong>Sanandita Debnath</strong> — Roll: 1/23/SET/BCS/506 — Student</li>
+      </ul>
+    </section>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

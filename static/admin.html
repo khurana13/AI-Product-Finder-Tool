@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Panel - AI Product Finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css?v=4">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">🤖 AI Product Finder</div>
+    <div class="nav-links">
+      <a href="/static/home.html">Home</a>
+      <a href="/static/search.html">Search</a>
+      <a href="/static/chat.html">Chat</a>
+      <a href="/static/admin.html" class="active">Admin</a>
+    </div>
+  </nav>
+
+  <div class="container page-container">
+    <div class="page-header">
+      <h1>⚙️ Admin Panel</h1>
+      <p>Manage search index, authentication, and system settings</p>
+    </div>
+
+    <!-- Authentication Card -->
+    <div class="admin-card">
+      <h3>🔑 Authentication</h3>
+      <div class="form-group">
+        <label>Admin Token</label>
+        <input id="adminToken" type="password" placeholder="Enter your admin token" />
+        <small>Token is stored in persist/admin_token.txt</small>
+      </div>
+    </div>
+
+    <!-- Index Management -->
+    <div class="admin-card">
+      <h3>🔄 Index Management</h3>
+      <p class="card-description">Rebuild the TF-IDF search index from CSV files. This should be done after updating product data.</p>
+      <button id="rebuildBtn" class="btn btn-primary btn-block">🔄 Rebuild Search Index</button>
+      <div id="rebuildResult" class="admin-result"></div>
+    </div>
+
+    <!-- Token Management -->
+    <div class="admin-card">
+      <h3>🔐 Token Management</h3>
+      <p class="card-description">Generate a new admin authentication token. The old token will be invalidated immediately.</p>
+      <button id="rotateBtn" class="btn btn-warning btn-block">🔑 Rotate Admin Token</button>
+      <div id="rotateResult" class="admin-result"></div>
+    </div>
+
+    <!-- Password Reset -->
+    <div class="admin-card">
+      <h3>🔒 Password Reset</h3>
+      <p class="card-description">Update admin credentials for Basic Authentication.</p>
+      <div class="form-group">
+        <label>New Username</label>
+        <input id="newUsername" type="text" placeholder="Enter new username" />
+      </div>
+      <div class="form-group">
+        <label>New Password</label>
+        <input id="newPassword" type="password" placeholder="Enter new password" />
+      </div>
+      <button id="resetBtn" class="btn btn-danger btn-block">🔒 Reset Password</button>
+      <div id="resetResult" class="admin-result"></div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script src="/static/admin.js"></script>
+</body>
+</html>
