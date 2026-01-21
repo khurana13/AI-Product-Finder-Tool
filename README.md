@@ -3,7 +3,9 @@
 This repository is a small student project implementing a product search and chatbot using TF-IDF retrieval and a minimal Flask backend.
 
 Author: Sneha Khurana 
+
 Course: AI PBL / Information Retrieval
+
 Date: 2025-11-09
 
 A Flask-based intelligent product search engine and chatbot powered by TF-IDF (Term Frequency-Inverse Document Frequency) retrieval. Search and chat about laptops, mobiles, and headphones using natural language queries.This project contains simple product CSV datasets and a command-line tool to search and chat with the product data.
